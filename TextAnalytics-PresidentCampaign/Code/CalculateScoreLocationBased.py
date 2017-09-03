@@ -14,9 +14,11 @@ from anew_module import anew
 import pandas as pd
 
 locationDictionary = {}
+with open('C:\\UTA Courses\\spring\\Data Science 5378\\textminingproject\\stateLocationDictionary.txt','r') as inf:
     locationDictionary = ast.literal_eval(inf.read())
     #print(locationDictionary)
 inf.close()
+
 locationDictionary = sorted(locationDictionary.items(), key= operator.itemgetter(0))
 
 # End
